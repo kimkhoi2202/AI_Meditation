@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Button from './Button';
 
-const sounds = ['Music', 'Nature', 'Rain', 'Celestial', 'Beach', 'Chimes', 'Storm', 'White Noise'];
-
+const sounds = ['music', 'nature', 'rain', 'ocean', 'chimes', 'storm'];
 function Soundscape() {
   const [selectedSound, setSelectedSound] = useState(null);
   const [audioSrc, setAudioSrc] = useState(null);
