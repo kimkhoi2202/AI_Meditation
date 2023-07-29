@@ -26,15 +26,24 @@ mapping = {
     "storm" : "./backgrounds/storm.mp3",
 }
 
+
+
+
 @app.route('/generate_meditation', methods=['POST'])
 def generate_customised_meditation():
     data = request.get_json()
     goal = data['goal']
     username = data['username']
+    voice_name = data['voice_name']
+    language = data['language']
+    if not language: 
+        language = "english"
+    if not voice_name:
+        voice_name = "Rachel"
     if not username: 
         username = "User"
-    meditation_text = generate_meditation_text(goal, username)
-    voice_audio_path = generate_voiceover(meditation_text, username)
+    meditation_text = generate_meditation_text(goal, username, language)
+    voice_audio_path = generate_voiceover(meditation_text, username, voice_name)
     return send_file(voice_audio_path,  mimetype='audio/mpeg')
 
 @app.route('/combine_audio', methods=['POST'])
