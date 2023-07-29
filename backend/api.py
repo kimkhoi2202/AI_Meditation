@@ -36,15 +36,19 @@ def generate_customised_meditation():
     username = data['username']
     voice_name = data['voice_name']
     language = data['language']
+    background = data['background']
     if not language: 
         language = "english"
     if not voice_name:
         voice_name = "Rachel"
     if not username: 
         username = "User"
+    if not background:
+        background = "ocean"
     meditation_text = generate_meditation_text(goal, username, language)
     voice_audio_path = generate_voiceover(meditation_text, username, voice_name)
-    return send_file(voice_audio_path,  mimetype='audio/mpeg')
+    combined_audio_path = combine_audio_files(voice_audio_path, mapping[background])
+    return send_file(combined_audio_path,  mimetype='audio/mpeg')
 
 @app.route('/combine_audio', methods=['POST'])
 def combine_audio():
