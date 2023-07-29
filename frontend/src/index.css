@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.content {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+.new-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+/* App Component */
+.App {
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* This divides the screen into three parts */
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, #FFFFFF, #88D1BE);
+}
+
+/* Header Component */
+.header {
+  width: 100%;
+  position: relative;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-top-left {
+  position: absolute;
+  top: 3.89vh;
+  left: 4.51vw;
+  width: 16.18vw;
+  height: auto;
+  transform: scale(0.85);
+}
+
+.logo-top-left img {
+  width: 16.18vw;
+  height: auto;
+}
+
+.illustration {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  height: 19.92vh;
+  width: auto;
+}
+
+.illustration img {
+  height: 14.94vh;
+  width: auto;
+}
+
+.profile {
+  position: absolute;
+  top: 3.89vh;
+  right: 4.44vw;
+  width: 8.19vw;
+  height: auto;
+  transform: scale(0.85);
+}
+
+.profile img {
+  width: 8.19vw;
+  height: auto;
+}
+
+/* Quadrant Headers */
+.quadrant h2 {
+  color: #FC8D4D;
+  font-size: 1.5vw;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.60px;
+  word-wrap: break-word;
+  height: 20px
+}
+
+/* UserInput Component */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1vw;
+  width: 100%;
+  background-color: #88D1BE;
+  gap: 1vh;
+}
+
+.user-input {
+  width: 75%;
+  height: 3vh;
+  padding: 1vw;
+  font-size: 1.3vw;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  line-height: 3vh;
+  letter-spacing: 0.01em;
+  color: #4BA3BF;
+  border: none;
+  border-radius: 100px;
+  background-color: white;
+  outline: none;
+  text-align: center;
+}
+
+.user-input::placeholder {
+  color: #4BA3BF;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.user-input:focus::placeholder {
+  opacity: 0.5;
+}
+
+/* Options Grid */
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 2vw;
+  justify-items: center;
+  align-items: center;
+  width: 90vw;
+  height: auto;
+  max-height: 100vh;
+  margin: auto;
+}
+
+/* Options Grid */
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1vw; 
+  justify-items: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* Soundscape Component */
+.soundscape {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+  color: #FC8D4D;
+  font-size: 2vw;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.soundscape-options {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.soundscape-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15vw;
+  height: 4vh;
+  padding: 1vw;
+  background-color: #FFFFFF;
+  border: 1px solid #489886;
+  border-radius: 100px;
+  color: #489886;
+  font-size: 1.1vw;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+/* Duration Component */
+.duration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+  color: #FC8D4D;
+  font-size: 2vw;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.duration-options {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.duration-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15vw;
+  height: 4vh;
+  padding: 1vw;
+  background-color: #FFFFFF;
+  border: 1px solid #489886;
+  border-radius: 100px;
+  color: #489886;
+  font-size: 1.1vw;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+/* Language Component */
+.language {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+  color: #FC8D4D;
+  font-size: 2vw;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.language-options {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.language-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15vw;
+  height: 4vh;
+  padding: 1vw;
+  background-color: #FFFFFF;
+  border: 1px solid #489886;
+  border-radius: 100px;
+  color: #489886;
+  font-size: 1.1vw;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+
+/* Voice Component */
+.voice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+  color: #FC8D4D;
+  font-size: 2vw;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.voice-options {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.voice-option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+}
+
+.voice-option-image {
+  width: 6vw;
+  height: 8vh;
+}
+
+.voice-option-name {
+  color: #06282A;
+  font-size: 1.1vw;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+/* Button Component */
+.button {
+  width: 9vw;
+  height: 4vh;
+  padding: 1vw;
+  background: white;
+  box-shadow: 0px 4px 4px rgba(6, 40, 42, 0.15);
+  border-radius: 100px;
+  border: 1px #489886 solid;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  display: inline-flex;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  margin: 0.5vw
+}
+
+.button-text {
+  color: #489886;
+  font-size: 1.1vw;
+  font-family: 'Poppins', sans-serif; 
+  font-weight: 500;
+  line-height: 3vh;
+  letter-spacing: 0.48px;
+  transition: font-weight 0.3s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.button:hover .button-text {
+  font-weight: 600;
+}
+
+.button.selected {
+  background-color: #88D1BE;
+}
+
+.button.selected .button-text {
+  color: #06282A;
+  font-weight: 600;
+}
+
+/* Start Meditation Button */
+
+.start-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: -80px
+}
+
+.start-button {
+  position: relative;
+  overflow: hidden;
+  width: 45vw;
+  height: 5vh;
+  padding: 1vw;
+  background: white;
+  box-shadow: 0px 4px 4px rgba(6, 40, 42, 0.15);
+  border-radius: 100px;
+  border: 1.5px #4BA3BF solid;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  display: inline-flex;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  /* Set the initial background image to a narrow linear gradient that's centered */
+  background-image: linear-gradient(#4BA3BF, #4BA3BF);
+  background-position: center;
+  background-size: 0% 100%;
+  /* Transition the background-size property, which will control the width of the gradient */
+  transition: background-size 0.3s ease;
+}
+
+.start-button:hover {
+  /* On hover, make the gradient cover the entire width of the button */
+  background-size: 100% 100%;
+}
+
+.start-button:hover .start-button-text {
+  color: #88D1BE;
+  font-weight: bold;
+}
+
+.start-button-text {
+  color: #4BA3BF;
+  font-size: 1.5vw;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-wrap: break-word;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
