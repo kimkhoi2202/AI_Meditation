@@ -19,7 +19,7 @@ const MainPage = () => {
       <Quadrant title="Language" buttons={languageButtons} />
       <Quadrant title="Duration" buttons={durationButtons} />
       <Quadrant title="Voice" buttons={voiceButtons} />
-      <StartMeditationButton />
+      {/* <StartMeditationButton /> */}
       <Footer />
     </div>
   );

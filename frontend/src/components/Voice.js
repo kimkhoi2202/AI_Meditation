@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+// Voice.js
+import React from 'react';
 import Button from './Button';
 
-const voices = ['Willow', 'Atlas', 'Daniel', 'Ester'];
+const voices = ['Rachel', 'Thomas', 'Emily'];
 
-function Voice() {
-  const [selectedVoice, setSelectedVoice] = useState(null);
-
+function Voice({ selectedVoice, onVoiceChange }) {
   return (
     <div className="quadrant voice">
       <h2>Voice</h2>
@@ -15,7 +14,7 @@ function Voice() {
             key={index}
             text={voice}
             isSelected={selectedVoice === voice}
-            onClick={() => setSelectedVoice(voice)}
+            onClick={() => onVoiceChange(voice)}
           />
         ))}
       </div>
@@ -24,3 +23,31 @@ function Voice() {
 }
 
 export default Voice;
+
+
+// import React, { useState } from 'react';
+// import Button from './Button';
+
+// const voices = ['Rachel', 'Thomas', 'Emily'];
+
+// function Voice() {
+//   const [selectedVoice, setSelectedVoice] = useState(null);
+
+//   return (
+//     <div className="quadrant voice">
+//       <h2>Voice</h2>
+//       <div className="voice-options">
+//         {voices.map((voice, index) => (
+//           <Button
+//             key={index}
+//             text={voice}
+//             isSelected={selectedVoice === voice}
+//             onClick={() => setSelectedVoice(voice)}
+//           />
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default Voice;
